@@ -1,7 +1,6 @@
 package com.recipe.api.services.impl;
 
 import com.recipe.api.dtos.RecipeDto;
-import com.recipe.api.entities.Category;
 import com.recipe.api.entities.Recipe;
 import com.recipe.api.dtos.RecipeListDto;
 import com.recipe.api.exceptions.RecipeNotFoundException;
@@ -9,11 +8,8 @@ import com.recipe.api.mappers.CategoryMapper;
 import com.recipe.api.mappers.IngredientsMapper;
 import com.recipe.api.mappers.RecipeMapper;
 import com.recipe.api.mappers.RecipeResponseMapper;
-import com.recipe.api.repositories.CategoryRepository;
-import com.recipe.api.repositories.IngredientsRepository;
 import com.recipe.api.repositories.RecipeRepository;
 import com.recipe.api.services.RecipeService;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,17 +24,13 @@ import java.util.stream.Collectors;
 public class RecipeServiceImpl implements RecipeService {
 
     private final RecipeRepository recipeRepository;
-    private final CategoryRepository categoryRepository;
-    private final IngredientsRepository ingredientsRepository;
     private final RecipeResponseMapper recipeResponseMapper;
     private final RecipeMapper recipeMapper;
     private final IngredientsMapper ingredientsMapper;
     private final CategoryMapper categoryMapper;
 
-    public RecipeServiceImpl(RecipeRepository recipeRepository, CategoryRepository categoryRepository, IngredientsRepository ingredientsRepository, RecipeResponseMapper recipeResponseMapper, RecipeMapper recipeMapper, IngredientsMapper ingredientsMapper, CategoryMapper categoryMapper) {
+    public RecipeServiceImpl(RecipeRepository recipeRepository, RecipeResponseMapper recipeResponseMapper, RecipeMapper recipeMapper, IngredientsMapper ingredientsMapper, CategoryMapper categoryMapper) {
         this.recipeRepository = recipeRepository;
-        this.categoryRepository = categoryRepository;
-        this.ingredientsRepository = ingredientsRepository;
         this.recipeResponseMapper = recipeResponseMapper;
         this.recipeMapper = recipeMapper;
         this.ingredientsMapper = ingredientsMapper;

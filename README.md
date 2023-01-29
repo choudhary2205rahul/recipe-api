@@ -22,6 +22,7 @@
     <li>Build this project: mvn clean install</li>
     <li>Run this project: mvn spring-boot:run </li>
     <li>Here is the link <a href="http://localhost:8080/api/recipes">RECIPE API</a></li>
+    <li>For Production we need to change ddl-auto to  & generate-ddl to false</li>
 </ul>
 
 <h3>How to run test: </h3>

@@ -44,5 +44,5 @@
 
 
 <h3>System Design: </h3>
-<img src="./Recipe Api.drawio" alt="System Design">
+<img src="./recipe-api.svg" alt="System Design">
 

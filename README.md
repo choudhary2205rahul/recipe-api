@@ -42,3 +42,7 @@
     <li>For Testing we are using H2 Database</li>
 </ul>
 
+
+<h3>System Design: </h3>
+<img src="./Recipe Api.drawio" alt="System Design">
+

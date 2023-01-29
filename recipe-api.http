@@ -1,0 +1,85 @@
+###
+POST http://localhost:8080/api/v1/recipes
+Content-Type: application/json
+
+{
+  "name": "Pancakes",
+  "description": "Delicious pancakes",
+  "image": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+  "serving": "4",
+  "instructions": "Mix all ingredients together and cook on a pan.",
+  "ingredients": [
+    {
+      "name": "Flour",
+      "quantity": "2 cups"
+    },
+    {
+      "name": "Eggs",
+      "quantity": "2"
+    },
+    {
+      "name": "Milk",
+      "quantity": "1 cup"
+    },
+    {
+      "name": "Sugar",
+      "quantity": "1/2 cup"
+    },
+    {
+      "name": "Salt",
+      "quantity": "1/2 tsp"
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": "1 tsp"
+    },
+    {
+      "name": "Butter",
+      "quantity": "1/2 cup"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Breakfast",
+      "description": "Breakfast recipes"
+    },
+    {
+      "name": "Dessert",
+      "description": "Dessert recipes"
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/api/v1/recipes
+
+###
+GET http://localhost:8080/api/v1/recipes/1
+
+###
+DELETE http://localhost:8080/api/v1/recipes/2
+
+###
+PUT http://localhost:8080/api/v1/recipes
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Pancakes",
+  "description": "Delicious pancakes",
+  "image": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+  "serving": "5",
+  "instructions": "Mix all ingredients together and cook on a pan."
+}
+
+###
+GET http://localhost:8080/api/v1/recipes/category/Breakfast
+
+###
+GET http://localhost:8080/api/v1/recipes/servings/5
+
+###
+GET http://localhost:8080/api/v1/recipes/ingredients/Eggs
+
+###
+GET http://localhost:8080/api/v1/recipes/instructions/cook

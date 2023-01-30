@@ -21,9 +21,15 @@
     <li>Add environment property DB_USER & DB_PASSWORD for MySQL Database</li>
     <li>Build this project: mvn clean install</li>
     <li>Run this project: mvn spring-boot:run </li>
-    <li>Http Client file is there to test the API's</li>
+    <li>Http Client file (recipe-api.http) is there to test the API's</li>
     <li>Here is the link <a href="http://localhost:8080/api/recipes">RECIPE API</a></li>
     <li>For Production we need to change ddl-auto to  & generate-ddl to false</li>
+</ul>
+
+<h3>Http Client: </h3>
+<ul>
+    <li>Http Client File is in the root directory</li>
+    <li>File recipe-api.http use this for testing api's</li>
 </ul>
 
 <h3>How to run test: </h3>
